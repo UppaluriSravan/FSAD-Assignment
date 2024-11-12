@@ -11,6 +11,9 @@ const ExistingBooks = () => {
     author: "",
     condition: "",
     contact: "",
+    genre: "",
+    location: "",
+    availabilityStatus: "available",
   });
 
   useEffect(() => {
@@ -44,6 +47,9 @@ const ExistingBooks = () => {
       author: book.author,
       condition: book.condition,
       contact: book.contact,
+      genre: book.genre,
+      location: book.location,
+      availabilityStatus: book.availabilityStatus,
     });
   };
   console.log("books", editingBook, books);
@@ -71,6 +77,9 @@ const ExistingBooks = () => {
         author: "",
         condition: "",
         contact: "",
+        genre: "",
+        location: "",
+        availabilityStatus: "available",
       });
     } catch (err) {
       setError(err.message);
@@ -201,6 +210,65 @@ const ExistingBooks = () => {
                     color: "#5d4037",
                   }}
                 />
+                <input
+                  type="text"
+                  value={updatedDetails.genre}
+                  onChange={(e) =>
+                    setUpdatedDetails({
+                      ...updatedDetails,
+                      genre: e.target.value,
+                    })
+                  }
+                  style={{
+                    width: "calc(100% - 20px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ddd",
+                    backgroundColor: "#f5e6d3",
+                    color: "#5d4037",
+                  }}
+                />
+                <input
+                  type="text"
+                  value={updatedDetails.location}
+                  onChange={(e) =>
+                    setUpdatedDetails({
+                      ...updatedDetails,
+                      location: e.target.value,
+                    })
+                  }
+                  style={{
+                    width: "calc(100% - 20px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ddd",
+                    backgroundColor: "#f5e6d3",
+                    color: "#5d4037",
+                  }}
+                />
+                <select
+                  value={updatedDetails.availabilityStatus}
+                  onChange={(e) =>
+                    setUpdatedDetails({
+                      ...updatedDetails,
+                      availabilityStatus: e.target.value,
+                    })
+                  }
+                  style={{
+                    width: "calc(100% - 20px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ddd",
+                    backgroundColor: "#f5e6d3",
+                    color: "#5d4037",
+                  }}
+                >
+                  <option value="available">Available</option>
+                  <option value="unavailable">Unavailable</option>
+                </select>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                   <button
                     onClick={handleUpdate}
@@ -243,6 +311,15 @@ const ExistingBooks = () => {
                 </p>
                 <p>
                   <strong>Contact:</strong> {book.contact}
+                </p>
+                <p>
+                  <strong>Genre:</strong> {book.genre}
+                </p>
+                <p>
+                  <strong>Location:</strong> {book.location}
+                </p>
+                <p>
+                  <strong>Availability:</strong> {book.availabilityStatus}
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                   <button

@@ -26,7 +26,9 @@ const AllBooks = () => {
   const filteredBooks = books.filter(
     (book) =>
       book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchTerm.toLowerCase())
+      book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.genre.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const indexOfLastBook = currentPage * booksPerPage;

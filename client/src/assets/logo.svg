@@ -1,0 +1,9 @@
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <!-- ...existing code... -->
+  <polygon points="60,15 108,36 108,84 60,105 12,84 12,36" stroke="#ff6347" stroke-width="3" fill="none"/>
+  <g>
+    <text x="60" y="54" font-family="Arial" font-size="36" text-anchor="middle" fill="#333">B</text>
+    <text x="60" y="90" font-family="Arial" font-size="36" text-anchor="middle" fill="#333">E</text>
+  </g>
+  <!-- ...existing code... -->
+</svg>

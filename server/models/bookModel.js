@@ -22,6 +22,19 @@ const bookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  genre: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  availabilityStatus: {
+    type: String,
+    required: true,
+    enum: ["available", "unavailable"],
+  },
   // Add any additional fields if necessary
 });
 

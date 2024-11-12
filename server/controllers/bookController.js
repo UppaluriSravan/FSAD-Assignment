@@ -46,6 +46,9 @@ exports.createBook = async (req, res) => {
     const book = new Book({
       ...req.body,
       user: req.user.id, // Ensure the user field is set correctly
+      genre: req.body.genre,
+      location: req.body.location,
+      availabilityStatus: req.body.availabilityStatus,
     });
     await book.save();
     res.status(201).json({

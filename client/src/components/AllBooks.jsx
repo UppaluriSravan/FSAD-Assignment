@@ -71,7 +71,7 @@ const AllBooks = () => {
                 border: "1px solid #ddd",
                 padding: "12px",
                 textAlign: "center",
-                width: "25%",
+                width: "15%",
               }}
             >
               Title
@@ -81,7 +81,7 @@ const AllBooks = () => {
                 border: "1px solid #ddd",
                 padding: "12px",
                 textAlign: "center",
-                width: "25%",
+                width: "15%",
               }}
             >
               Author
@@ -91,7 +91,7 @@ const AllBooks = () => {
                 border: "1px solid #ddd",
                 padding: "12px",
                 textAlign: "center",
-                width: "25%",
+                width: "15%",
               }}
             >
               Condition
@@ -101,10 +101,40 @@ const AllBooks = () => {
                 border: "1px solid #ddd",
                 padding: "12px",
                 textAlign: "center",
-                width: "25%",
+                width: "15%",
               }}
             >
               Contact
+            </th>
+            <th
+              style={{
+                border: "1px solid #ddd",
+                padding: "12px",
+                textAlign: "center",
+                width: "15%",
+              }}
+            >
+              Genre
+            </th>
+            <th
+              style={{
+                border: "1px solid #ddd",
+                padding: "12px",
+                textAlign: "center",
+                width: "15%",
+              }}
+            >
+              Location
+            </th>
+            <th
+              style={{
+                border: "1px solid #ddd",
+                padding: "12px",
+                textAlign: "center",
+                width: "15%",
+              }}
+            >
+              Availability
             </th>
           </tr>
         </thead>
@@ -133,6 +163,15 @@ const AllBooks = () => {
                 onClick={() => handleContactClick(book.contact)}
               >
                 {book.contact}
+              </td>
+              <td style={{border: "1px solid #ddd", padding: "12px"}}>
+                {book.genre}
+              </td>
+              <td style={{border: "1px solid #ddd", padding: "12px"}}>
+                {book.location}
+              </td>
+              <td style={{border: "1px solid #ddd", padding: "12px"}}>
+                {book.availabilityStatus}
               </td>
             </tr>
           ))}
